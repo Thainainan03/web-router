@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter , Switch , Route , NavLink } from 'react-router-dom';
-import { Home } from './components';
+import { Home , BasicRouting } from './components';
 
 class App extends Component {
   render() {
@@ -15,10 +15,12 @@ class App extends Component {
         </div>
           <ul>
             <li><NavLink to="/" activeClassName="active">Home</NavLink></li>
+            <li><NavLink to="/BasicRouting" activeClassName="active">BasicRouting</NavLink></li>
           </ul>
-        <div>
+
           <Route path="/" component={Home} />
-        </div>
+          <Route path="/BasicRouting" component={BasicRouting} />
+
       </div>
       </BrowserRouter>
     );
